@@ -40,7 +40,19 @@ public class JSFunction {
         catch (Exception e) {}
     }
     
-    
+	public static void cookiePage(JspWriter out) {
+        try {
+            String script = "<script>"
+                          + "   open('../writeSession/Cookie.jsp', "
+                          + "   'cookie', "
+                          + "	'width=650px, height=800px, left=100, top=100, "
+                          + "	location=no, toolbar=no, menubar=no, "
+                          + "	scrollbars=yes, resizable=no')"
+                          + "</script>";
+            out.println(script);
+        }
+        catch (Exception e) {}
+    }
     
     /*
     앞의 2개의 메서드는 JSP에서 out내장객체를 받은 후 Javasctipt함수를

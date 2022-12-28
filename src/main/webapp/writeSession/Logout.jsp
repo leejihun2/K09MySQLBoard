@@ -9,5 +9,5 @@ session.removeAttribute("UserName");
 //2. session영역의 모든 속성을 한꺼번에 삭제한다. 
 session.invalidate();
 
-response.sendRedirect("wLoginFrom.jsp");
+response.sendRedirect("../writeboard/writehome.jsp");
 %>

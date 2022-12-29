@@ -113,7 +113,7 @@ body{
     <h2>아이디 중복확인 하기</h2>
 
 
-    <h4>부모창에서 입력한 아이디 :
+    <h4>입력한 아이디 :
     <span id="user_id"></span>
     <%-- <%= userId %> --%></h4>
     <%
@@ -137,7 +137,7 @@ if(!isDup){
 	System.out.println("사용가능");
 	%>
 	
-	<h3>입력한 아이디는 사용가능합니다.^^ </h3>
+	<h3>아이디 사용가능 </h3>
     <form name="overlapFrm2">
         <input type="hidden" name="retype_id" size="20"> 
         <button type="button" class="btn" onclick="idUse();" >아이디사용하기</button>   

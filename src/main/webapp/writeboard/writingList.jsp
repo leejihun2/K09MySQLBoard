@@ -9,69 +9,40 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     
 <%
-//DAO객체생성을 통해 오라클 DB에 접속한다. 
-//application내장객체를 DAO객체의 생성자로 전달하여 생성자에서 web.xml의 컨텍스트 초기화
-//파라미터를 즉시 읽어올 수 있도록 처리한다. 
 boardWritingDAO dao = new boardWritingDAO(application);
 
-
-//검색어가 있는 경우 파라미터 저장을 위해 Map계열의 컬렉션을 생성한다. 
 Map<String, Object> param = new HashMap<String, Object>();
 
 
-//멀티게시판 구현을 위해 반드시 필요한 파라미터
 String b_flag = request.getParameter("b_flag");
-//파라미터를 DAO로 전달하기 위해 Map컬렉션에 저장한다.
 param.put("b_flag", b_flag);
 param.put("id",session.getAttribute("UserId"));
-//해당 페이지로 전달된 파라미터를 받아온다. 
 String searchField = request.getParameter("searchField");
 String searchWord = request.getParameter("searchWord");
-//검색어가 있는 경우에만 파라미터를 Map컬렉션에 저장한다. 
-//목록에 최초로 진입한 경우라면 파라미터는 없는 상태일 것이다. 
 if (searchWord != null) {
-	//검색을 위한 테이블의 컬럼명 : title, content
     param.put("searchField", searchField); 
-	//클라이언트가 입력한 검색어
     param.put("searchWord", searchWord); 
 }
-//board테이블에 저장된 게시물의 갯수를 카운트 한다. 
 int totalCount = dao.selectCount(param);
-//
-
 
 /** 페이지 처리 start ********/
 
-//컨텍스트 초기화 파라미터를 얻어온 후 사칙연산을 위해 정수로 변환한다. 
 int pageSize = Integer.parseInt(application.getInitParameter("POSTS_PER_PAGE"));
 int blockPage = Integer.parseInt(application.getInitParameter("PAGES_PER_BLOCK"));
 
-//전체페이지수를 계산한다. (전체게시물갯수 / 페이지당게시물갯수 = 결과의 올림처리)
 int totalPage = (int)Math.ceil((double)totalCount / pageSize); 
 
-/*
-목록에 첫 진입시에는 페이지 관련 파라미터가 없는 상태이므로 무조건 1page로 지정한다.
-만약 파라미터 pageNum이 있다면 request내장객체를 통해 받은 후 페이지번호로 지정한다.
-List.jsp => 이와같이 파라미터가 없는 상태일때는 null
-List.jsp?pageNum= => 이와같이 파라미터는 있는데 값이 없을때는 빈값으로 체크된다.
-따라서 아래 if문은 2개의 조건으로 구성해야된다. 
-*/
 int pageNum = 1; 
 String pageTemp = request.getParameter("pageNum");
 if (pageTemp != null && !pageTemp.equals(""))
  	pageNum = Integer.parseInt(pageTemp); 
 
-//게시물의 구간을 계산한다. 
-//각 페이지에서의 시작번호(rownum)
 int start = (pageNum - 1) * pageSize;
-//각 페이지에서의 종료번호(rownum)
 int end = pageNum * pageSize;
-//계산된 값을 DAO로 전달하기 위해 Map컬렉션에 저장한다. 
 param.put("start", start);
 param.put("end", end);
 
 /** 페이지 처리 end ********/
-//String id = (String)session.getAttribute("UserId");
 
 List<boardWritingDTO> boardLists;
 if(b_flag.equals("wm")){
@@ -82,8 +53,6 @@ else{
 	boardLists = dao.selectListPage(param);
 }
 
-//만약 검색어가 있다면 해당 조건에 맞는 게시물만 select해야한다. 
-//따라서 검색어 여부에 따라 where절이 조건부로 추가된다. 
 
 //자원해제
 dao.close(); 
@@ -98,7 +67,7 @@ else if(request.getParameter("b_flag").equals("sm")){
 	boardTitle = "글 공유";
 }
 else if(request.getParameter("b_flag").equals("si")){
-	boardTitle = "책공유";
+	boardTitle = "일상 공유";
 }
 %>
 <!DOCTYPE html>
@@ -270,8 +239,7 @@ body{
 				</c:if>
 				
 				<button type="button" class="btn btn-warning"
-					onclick="location.href='writingList.jsp?b_flag=<%=b_flag %>';">리스트보기</button>
-				<button type="button" class="btn btn-dark">Reset</button>
+					onclick="location.href='writingList.jsp?b_flag=<%=b_flag %>';">목록보기</button>
 			</div>
 		</div>
 		<div class="row mt-3">

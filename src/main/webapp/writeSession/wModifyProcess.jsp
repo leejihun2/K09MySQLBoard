@@ -33,7 +33,7 @@ if (iResult == 1) {
 
 	session.invalidate();
 
-	JSFunction.alertLocation("회원정보수정 성공", "../writeboard/wLoginFrom.jsp", out);
+	JSFunction.alertLocation("회원정보수정 성공", "wLoginFrom.jsp", out);
 }
 else {
 	

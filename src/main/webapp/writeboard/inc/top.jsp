@@ -18,11 +18,11 @@
                         <div class="dropdown-menu m-0">
                         	<% if (session.getAttribute("UserId") == null) { %>
                             <a href="../writeboard/writingList.jsp?b_flag=sm" style="color: #5a5a5a;" class="dropdown-item">글 공유</a>
-                            <a href="../writeboard/writingList.jsp?b_flag=si" style="color: #5a5a5a;" class="dropdown-item">책공유</a>
+                            <a href="../writeboard/writingList.jsp?b_flag=si" style="color: #5a5a5a;" class="dropdown-item">일상 공유</a>
                             <% } else { %>
                             <a href="../writeboard/writingList.jsp?b_flag=wm" style="color: #5a5a5a;" class="dropdown-item">나의 글</a>
                             <a href="../writeboard/writingList.jsp?b_flag=sm" style="color: #5a5a5a;" class="dropdown-item">글 공유</a>
-                            <a href="../writeboard/writingList.jsp?b_flag=si" style="color: #5a5a5a;" class="dropdown-item">책공유</a>
+                            <a href="../writeboard/writingList.jsp?b_flag=si" style="color: #5a5a5a;" class="dropdown-item">일상 공유</a>
                              <% } %>
                         </div>
                     </div>

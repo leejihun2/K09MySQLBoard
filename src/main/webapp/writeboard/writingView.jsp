@@ -185,7 +185,7 @@ function deletePost() {
      </div>            
      
 <c:if test="${ param.b_flag eq 'si' }">     
-<div class="container d-flex justify-content-center">
+<div class="container d-flex justify-content-center py-6 px-5">
          <div class="form-group">
 <form method="post"
 action="DatglProcess.jsp">
@@ -226,7 +226,7 @@ else {
 	for (DatglDTO dtoo : datglLists) {
     	if(dtoo.getNumm().equals(num)){
 %>
-<table class="table table-striped" style="text-align: left;
+<table class="table table-striped py-6 px-5" style="text-align: left;
    border: 1px solid #dddddd; width: 800px">
    <tr>
       <td width="30%"><%= dtoo.getIdm() %></td>

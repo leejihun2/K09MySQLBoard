@@ -64,7 +64,7 @@ dao.close();
 
 <head>
     <meta charset="utf-8">
-    <title>인생 씀</title>
+    <title>씀</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -104,30 +104,24 @@ dao.close();
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="w-100" src="img/Kakao.png" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class=" d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <i class="fa fa-home fa-4x text-primary mb-4 d-none d-sm-block"></i>
-                            <h1 class="display-2 text-uppercase text-white mb-md-4">당근나라</h1>
                             <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Get A Quote</a> -->
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="w-100" src="img/KakaoTalk2.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class=" d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <i class="fa fa-tools fa-4x text-primary mb-4 d-none d-sm-block"></i>
-                            <h1 class="display-2 text-uppercase text-white mb-md-4">유로트럭</h1>
                             <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Contact Us</a> -->
                         </div>
                     </div>
                 </div>
                  <div class="carousel-item">
                     <img class="w-100" src="img/KakaoTalk1234.png" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class=" d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <i class="fa fa-tools fa-4x text-primary mb-4 d-none d-sm-block"></i>
-                            <h1 class="display-2 text-uppercase text-white mb-md-4">집밥천국</h1>
                             <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Contact Us</a> -->
                         </div>
                     </div>

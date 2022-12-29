@@ -70,7 +70,7 @@ else if(request.getParameter("b_flag").equals("sm")){
 	boardTitle = "글 공유";
 }
 else if(request.getParameter("b_flag").equals("si")){
-	boardTitle = "책공유";
+	boardTitle = "일상 공유";
 }
 %>
 

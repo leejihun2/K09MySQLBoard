@@ -189,9 +189,9 @@
 </head>
 <body>
 
-
+	
 	<!-- partial:index.partial.html -->
-	<a href="https://front.codes/" class="logo" target="_blank"> <!-- <img src="https://assets.codepen.io/1462889/fcy.png" alt=""> -->
+	<a href="../writeboard/writehome.jsp" class="logo" target="_blank"> <img src="https://assets.codepen.io/1462889/fcy.png" alt="">
 	</a>
 
 

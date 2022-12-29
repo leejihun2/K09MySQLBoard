@@ -13,7 +13,7 @@
 다르기 때문이다. */ 
 String saveDirectory = application.getRealPath("/Uploads");
 //업로드할 파일의 최대용량제한(1mb로 지정함)
-int maxPostSize = 1024 * 1000;
+int maxPostSize = 3000 * 3000;
 //인코딩 방식 지정
 String encoding = "UTF-8";
 	try{

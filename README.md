@@ -6,5 +6,4 @@ mariaDB
 ![JavaScript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![MySQL](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=150&section=header&text=Lee&nbsp;ji&nbsp;hun&fontSize=70&animation=twinkling)
 
